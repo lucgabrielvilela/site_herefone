@@ -15,3 +15,5 @@ dist/
 # Editor
 .DS_Store
 Thumbs.db
+
+.vercel
