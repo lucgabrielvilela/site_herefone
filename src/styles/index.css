@@ -1,3 +1,267 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
+/* =============================================
+   Herefone – Blue & Black Brand Design System
+   ============================================= */
+
+:root {
+  --hf-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hf-black: #0f172a;
+  --hf-blue: #0066ff;
+  --hf-blue-hover: #0052cc;
+  --hf-blue-light: #eff6ff;
+  --hf-blue-subtle: #dbeafe;
+  --hf-surface: #ffffff;
+  --hf-border: #e2e8f0;
+}
+
+body {
+  font-family: var(--hf-font-sans);
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Brand Typography --- */
+.hf-text-blue {
+  color: var(--hf-blue) !important;
+}
+
+.hf-text-black {
+  color: var(--hf-black) !important;
+}
+
+/* --- Brand Buttons --- */
+.hf-btn-blue {
+  background-color: var(--hf-blue);
+  border: 1px solid var(--hf-blue);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.hf-btn-blue:hover,
+.hf-btn-blue:focus {
+  background-color: var(--hf-blue-hover);
+  border-color: var(--hf-blue-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.hf-btn-dark {
+  background-color: var(--hf-black);
+  border: 1px solid var(--hf-black);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.hf-btn-dark:hover,
+.hf-btn-dark:focus {
+  background-color: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Fallback for legacy class */
+.hf-btn-gradient {
+  background-color: var(--hf-blue);
+  border: 1px solid var(--hf-blue);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.hf-btn-gradient:hover {
+  background-color: var(--hf-blue-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);
+}
+
+/* --- Brand Badges --- */
+.hf-badge-blue {
+  background-color: var(--hf-blue-light);
+  color: var(--hf-blue);
+  border: 1px solid var(--hf-blue-subtle);
+  font-weight: 600;
+}
+
+.hf-badge-black {
+  background-color: var(--hf-black);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hf-badge-gradient,
+.hf-badge-clean {
+  background-color: var(--hf-blue-light);
+  color: var(--hf-blue);
+  border: 1px solid var(--hf-blue-subtle);
+  font-weight: 600;
+}
+
+/* --- Navigation Links --- */
+.hf-nav-link {
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.hf-nav-link:hover {
+  color: var(--hf-blue) !important;
+  background-color: var(--hf-blue-light);
+}
+
+/* --- Cards & Interactions --- */
+.hf-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border-radius: 1rem !important;
+  background-color: #ffffff;
+  border: 1px solid var(--hf-border);
+}
+
+.hf-card-link:hover .hf-card {
+  transform: translateY(-4px);
+  border-color: var(--hf-blue-subtle);
+  box-shadow: 0 12px 24px -4px rgba(0, 102, 255, 0.1) !important;
+}
+
+.hf-card-img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hf-card-link:hover .hf-card-img {
+  transform: scale(1.05);
+}
+
+.hf-card-link:hover .hf-card-title {
+  color: var(--hf-blue) !important;
+}
+
+/* --- Scrollable Row Controls --- */
+.hf-scrollable-row::-webkit-scrollbar {
+  display: none;
+}
+
+.hf-row-container {
+  position: relative;
+}
+
+.hf-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50% !important;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.2s ease;
+  background: #ffffff !important;
+  border: 1px solid var(--hf-border) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hf-row-container:hover .hf-scroll-btn {
+  opacity: 1;
+}
+
+.hf-scroll-btn:hover {
+  background: var(--hf-blue-light) !important;
+  color: var(--hf-blue) !important;
+  border-color: var(--hf-blue-subtle) !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15) !important;
+}
+
+.hf-scroll-btn--left {
+  left: 8px;
+}
+
+.hf-scroll-btn--right {
+  right: 8px;
+}
+
+/* --- Check Icons & Accents --- */
+.hf-check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hf-blue-light);
+  color: var(--hf-blue);
+  border-radius: 50%;
+  padding: 4px;
+  margin-top: 1px;
+}
+
+.hf-table-link:hover {
+  color: var(--hf-blue) !important;
+}
+
+/* --- Guia & Marca Cards --- */
+.hf-marca-card {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--hf-border) !important;
+}
+
+.hf-marca-card:hover {
+  border-color: var(--hf-blue-subtle) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.08) !important;
+}
+
+.hf-mini-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--hf-border) !important;
+}
+
+.hf-mini-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--hf-blue-subtle) !important;
+  box-shadow: 0 8px 16px -2px rgba(0, 102, 255, 0.1) !important;
+}
+
+.hf-guia-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--hf-border) !important;
+}
+
+.hf-guia-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--hf-blue-subtle) !important;
+  box-shadow: 0 10px 20px -3px rgba(0, 102, 255, 0.1) !important;
+}
+
+/* --- Detail Page --- */
+.hf-detail-img-wrap:hover {
+  box-shadow: 0 16px 40px -8px rgba(0, 102, 255, 0.12);
+}
+
+.hf-detail-img-wrap:hover .hf-detail-img {
+  transform: scale(1.04);
+}
+
+.hf-detail-img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hf-spec-chip {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hf-spec-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -3px rgba(0, 102, 255, 0.12);
+}
+
+.hf-detail-section-card {
+  transition: box-shadow 0.2s ease;
+}
+
+.hf-detail-section-card:hover {
+  box-shadow: 0 8px 24px -4px rgba(0, 102, 255, 0.08);
+}
+
+.breadcrumb-item.active {
+  color: var(--hf-black) !important;
+}

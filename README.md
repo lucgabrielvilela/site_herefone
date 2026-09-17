@@ -1,11 +1,48 @@
+# Herefone
 
-  # herefone
+Site de rankings e reviews de fones TWS (True Wireless Stereo) do mercado brasileiro.
 
-  This is a code bundle for herefone. The original project is available at https://www.figma.com/design/T1DXvwrwxWwl7PC9ikgzzX/herefone.
+## Stack
 
-  ## Running the code
+- **React 18** + **JavaScript (JSX)**
+- **Vite 6** — build tool
+- **Bootstrap 5** — estilização
+- **React Router 7** — roteamento
+- **Lucide React** — ícones
 
-  Run `npm i` to install the dependencies.
+## Rodando localmente
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm install
+npm run dev
+```
+
+Acesse em `http://localhost:5173`
+
+## Build de produção
+
+```bash
+npm run build
+```
+
+## Estrutura
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── Home.jsx          # Página inicial com rows de fones
+│   │   ├── EarbudCard.jsx    # Card de fone (scroll horizontal)
+│   │   ├── EarbudRow.jsx     # Linha horizontal com scroll
+│   │   ├── EarbudDetails.jsx # Página de detalhes do fone
+│   │   ├── Ranking.jsx       # Página de rankings (tabelas)
+│   │   ├── Marcas.jsx        # Página de marcas
+│   │   └── Guias.jsx         # Guias de compra
+│   ├── data/
+│   │   └── earbuds.js        # Banco de dados dos fones
+│   ├── App.jsx               # Root com RouterProvider
+│   └── routes.jsx            # Definição de rotas
+├── styles/
+│   └── index.css             # CSS customizado (complemento ao Bootstrap)
+└── main.jsx                  # Entry point
+```

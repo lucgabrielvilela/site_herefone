@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Vite cache
+.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor
+.DS_Store
+Thumbs.db
