@@ -94,7 +94,7 @@ export const earbuds = [
     id: 6,
     nome: "Kuba Mali 2",
     preco: 379.00,
-    avaliacao: 4.7,
+    avaliacao: 4.6,
     cancelamentoRuido: true,
     autonomia: "30 horas (total)",
     marca: "Kuba",
